@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Family Book</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload = "update();">
+        <div>
+        <p id = "name"></p>
+        <h1>My Family Book</h1>
+        <img id = "family_book_image">
+        <br>
+        </div>
+        
+        <button onclick = "update();" class="btn btn-outline-info">Next</button>
+    </body>
+</html>
+
+<script>
+var images = ["https://as2.ftcdn.net/jpg/01/15/47/87/500_F_115478791_GG0yIcVA8Mhe6MAXEvgcfyL7JtuVfYvm.jpg", "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEhMSEREQEBUTEA8VEBAWFQ8VFhAQFhIXFhUXExYYHighGBolGxYXIjEiJS4rLi4xFyAzOjMtNygtLisBCgoKDg0OGxAQGismICUtKzcrLS0tLS0rMS0wLS0tNS0tLS0tLS8rLSstLS0tLS0rLjctLS0tNS0tKy0tLS0tLf/AABEIAOkA2AMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgEDBAUHCAL/xABCEAACAgECAwUFBAUKBwEAAAABAgADEQQSBSExBhNBUWEHInGBoTKRscEjM0JichRjgpKistHh8PEVJFJTc4PCQ//EABoBAQADAQEBAAAAAAAAAAAAAAACAwQFAQb/xAArEQEAAgIBAwMDAwUBAAAAAAAAAQIDEQQSITETQVEFIjIzcYFSYaHB0RX/2gAMAwEAAhEDEQA/AO4xEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREjPbntavDqq3NZtay0KqZx7o5uc+g6esDacd45p9HX3uofYm5VBwSSzHkABz9flMzSaqu1A9brYrDKspBBHxE5F7Uu0Oj12jos02oRmS8M9BO2wBkKnNZ58ievTmZzOjVWV/q7La89djumfjtIzI9ScU3D1Tdqa0+26J/Eyj8Z9VXqwyrKw8wQR9J5QssZz7zM582LMfrzmTw/iF+mcWU2WUODyKkrn0ZejD0OY6nvpvVMrIH2R9pek1XdU3k0ahlUHcMV2WeIR+gz4BseXOTvM92hMaViInrwiIgIiICIiAiIgIiICIiAiIgIiICIiAnNfbhw5n0tVygkU2/pPRXG0E/PA+c6VIH7V+Eau2gW6RrCa1sW6lSf0tDgbvd6NjHTrgnE8nw9r5cGmz4BwS3V2BKwcD9ZZj3ax6+vkJuOwHBKdTbat6FhWikJkr724gg/djEnnZbh2prAssdKkdCV0SVqooJIK5fOSwHI+efSUWvptx4urvLYcP4NVRUK6kRSEwHKqTuxyZj4nPOavS8F1Zwmrs02srYEWqagjLy5FGXrz8PWSWY51J37BW7AY3We4FBPhzOT8hKItLXNYcm7adljo2D1lmpdvcbnmpuoVj+B9POd07J697dLQbQVt7io2qeRDbRkzSa7RpdW1Vg3KwwR88gj1BwflM7hTlbVHqB8sf5S2mWe0M2XjxqZSeJQSs1OeREQEREBERAREQEREBERAREQEREBERApOfe0Ht5qOH6iuuuiqysoGdmcbmOTlVVTlcDHMjHP0MnOvu2oT4nkPiZCNN2a0AsawUpZbuBd3LWPvPMFixPPxld76XYsM37sB9Ey8SXV01t3Gt04NoxzpvwDhx4A4HPpnPpN3qjb7orCcydzNuIVR5AdSf8ZW3WpXelTGwteHNfLKDYBkBgPdOD0PXEybFme/eduhiiIjpWLbNoz48uXnPtWBGRPm9cg8i3oOp+Exqu8Zl901omcAkbrGxgZx0Uc/UkjpjnUv9mZNtwPTDHeHmSWC+QA5cppnb9kdTyElGjqCIqjwAz8fGX4Y77ZOXfVdfK+JWUErNTmkREBERAREQEREBERAREQEREBERAREQMLiqZTPkQfxH5yNcR0LWAd3a9DC6uxmTHvhcAq4PUFRj5CSrW0F1Kg49ZotQhrO0kE4HOUZe07beNMTXp91kht+QPdP2iT9Avn6y6E3ZAOMDMs26jHSZmkq21knq3P7+kniw9Ubt4ZuZzuieinn3YWx+m3PwM+LEsHIqR59JtNOuT8JTUdZOeJX2lTX6tkiO9YOH8P2e82C3h5L8/OYfEuJMLB3bY2cj5MfGfPFeIuoCDlkcz4n09JoGbM4HP5M0t6VPMT3l2eLj9aPVt7p5wviAuXPRh9pfL4ekzZCOAaopaOfI8j8D/nJvOlwOTOfFufMeWHl4fSvqPCsRE3MxERAREQEREBERAREQEREBERAREQEwNfw8WHIODj5H4zPieTETGpSraazuEY1OhZCNw5eBHQyn8qxhTzHX4SRaikOrKcjIIyOo9R6yA6nUXUWFLAHI6E8tw8CCJC/Kx8esReJ18qL8PLybzakxv4/4ltBULyIPiZr9Zq1Tm3U9F8TNC3Fnf3QoXzPUy0zE8ySfWYOV9ZpEaw95+WrjfR72nebtHwuai4uxZvu8h5CWol+uvHM/7T5y1ptPVM930VaxWOmI7PqkY5+PWT6h8qp81B+kgkmnCWzTWf3F+gxOv9Ht91q/2c76jHassuIETvuSREQEREBERAREQEREBERAREQEREBERApMHinCq712uOY+yw6qfSZ8SN6VvHTaOyVbTWdx5Qa/spqFP6Mo48DnafmDMLVcNurbbYVU4zyOeU6NIl2q/Wj+AfiZw+fwcWLHN67dPi8vJkvFbNPTUq+p8zL0syoacXTprsmHAz+gr+B/vGQ1WzJhwD9Qn9L+8Z1fpH60/t/uHP8AqP6cfu2MRE+jcciIgIiICIiAiIgIiICIiAiIgIiICIiAiIgJBu2vFKKdQq22pWWqBXccZG4jr0HOTief/aRxDv8AiFxHNaytS/BBz+pMy8vFGXH0y1cSZrk3Ca1a2lvs21N8LKz+BlX1dS/asqX4ug/EzkBqU+AlO5XyE5H/AJlf6v8ADqevPw6lf2i0SddTSfRW3n+zmdA7JapLdJVZWdyuHKnp+2w6eHSebwg8p3f2SsTw6vPhbqAvw7w/mTN3D4lMN5mJnwx8zJNqRv5TKIidNzSIiAiIgIiICIiAiIgIiICIiAiIgIiICIiBicV1i0U23N0qqsc/BVJ/KeZbbWcl2OWZmZj5sxyfqZ3D2tcQ7rQMgPO50r/o53N9B9Zw2Z8099N3Fr9syzeCcPbUaimhetlir8F6sfkoJ+U2HbjRU0a26qldiIawFyTz7tS3X1Mm3sb7P/b1rjwaujPln9Iw/D75CO3Nm7iGrP8APsPuAH5SM11XayL7yaj2aImeiuwui7nQaVCMHuEZh++/vt9WnBOB8POo1FNA/wD0tRT/AA5y30BnpetQAAOgAA+Ak8Me6nlW8Q+oiJexkREBERAREQEREBERAREQEREBERAREQERKGBx/wBtPEN19FAP6uo2N/E5wvzwp++QThPD31F1dFf2rHCg/wDT5sfgMmbX2gak2cR1RP7NoQeioiqPwJ+cl3sW4Opa7VtglcVVDllSRudj5ZBUD5zNrqu6ET6eKJdO4XoEoprprGFrRUUegHU+vj855z7RWbtVqG89Rd/fM9KseXynmLiTZutPndaf7ZksviFXF72mU09jnDu81j2kcqKTj/yWHav0DztUgfsd4d3eja0jnfax/oJ7q/gT85PZZjjVVWe27yRESakiIgIiICIiAiIgIiICIiAiIgIiICIiAlDKxA859vSF4jrB/Pk/eit+c6j7G7lbQYAAK33Bj4scggn1wR905p7Uq9vFNV69w330J/hJ77DX/wCU1A8tWfrTXKK/m25e+KP4dIM82dqdH3Gs1FR/ZvfHwY7h9CJ6TnD/AG08O7vWpcByvoXJ/nKztP8AZKfdJZY3CrjW1bSd+yHVo+gVV6122K/Mn3idwPzBEm0417DeIbb9RQTysqSxR+9W21vvDj+rOyyVJ+1DNGryRESaoiIgIiICIiAiIgIiICIiAiIgIiICIiAlDKyhgcB9ruP+J24/7Omz8dh/LEm3sNX/AJTUHz1Z+lNc537R3sPEdS9iOm6wCvcCN1aIqKVz1B255ec6d7FqccPLf9epuI+WE/8AmU1/NsydsMfwn0577auH79Gl2OdNy8/3XG0/XH3ToUi/tMUHhmqz4VqR8Q6yy3hmxzq0OQ+zDVd3xLT/AL5es/BkP5gT0NPMHZy/Zq9M/lqKfq4H5z0+JDFPZdyY+6JViIlrMREQEREBERAREQEREBERAREQEREBERAj3bnjlmj0j21IXsOFqG0sAzftMB4Ac/lODV9p+IizedZq9xPvE2WAH+j9kD0AxPTLLnkefpNbfwDSvzNNf9VfzE9iXkxtwq7tdq7BttYagc8LciOF9RyHOdB9k3G3bTWVOgApsGxlAXcLNzEEDxB/ESWjszph0rqH/rSX6+EKvJdq+gUD8JHVdzMR3lLc61M9nPPaX7QL6XGl0jdywUNddhSwyMhE3AgHHU48ZEdL2+4g1bV33JqEPJltppcMPEMMDInadX2bot/WpXZ6lFJ++YJ7A8P8aE+QI/OTiYR1LiX/ABCgWV2DSVKa7EscK1iq4U52qmfcHwnpDR3B0RwCA6KwB6gMoOD980tHYvh69NNWfiMzfVoAAAMAAADyA6SEVrHhKbWt+UvqIievCIiAiIgIiICIiAiIgIiICIiAiYza1BYtWfeZHYeWEKg5Pn74n3qNSiLudgoyoz6lgo+pAgXolmrUo27awO1trejYzj6y5vHpA+olmrUo27awO1mVvRh1E+dXrEr27s+9ZWgxz95zhc+mYGRE+d3+8bx6QPqJQMJY1usWpdzCwjOMJXdac/w1qxx6wMiJq6O0GlcoFs/WDKEpao6FgGZlAViATtODgZxKjj2mKJYrtYtjutZrrutLMjFXwqKTgFTzxiBs4mBVxjTs7ViwblDE5DKML9vaxG1tuRnBOPHE+TxzT/o82Y70KUOy3G1jhCxx7gY8gWxnwgbGJr7uNadTYDZlq2RXRVsdg7qWVQqgljgE4Geky9Netiq6MGVgCrDoVPQiBdiIgIiICIiAiIgIiICfNgyCPMHzn1ECHp2TcpsZdOAtOpSlBubumcViti5QFiNjHcRkZHU85839l73XY38mdU7417i571rNQl/6QFCEHulcjd1z6SYxAh+u7KM+7bXpgpv7zuw71iwNSUIdlryNhOVODnJ+yecvansw22wotDWPqBYjuW91RSta78qe8wQx2nkc9QeclUf5QIlquzLnvNtekYNde+1tyizvVxusAQ4ZCTjrnJ5rPl+ylxQ1l6+dlLHWAuNQ4UoSG93ljby945z4dTLjKiBoNXwq56qUNembuShNJZxVdhGUgjYdoBIYcm6fOa+3srazc/5OBuZmcb916tYjd3YMclUKQObZ5fZ55lw/198qIGg4HwD+T2M47sBhqQQuQSr6lrKQeXRKyF9MYHKZ+r0L9waaXKZATvGZyyoT75DHJL7ScZ8cTYRA0Wp4TYbati0LVQQa+dgYL3ZTuimCpB5e/nIHLHjMMcF1RpKMmmV+/wBY6WLfqM0i+17Ny4rXcV342nAO0HI6SUiDAiWp7MXvWKS9TV1tayklw2o7xssl2F9xSCwJXdnPQYwbo4TrP0aEUNVvZ3Tv7gytv3IoZqmNiJ1AO3Jx0AwZRKCBGquz99XeCu1dQr11oUuIrLgG0uTZUmVYmzO7Bz73nmbvhOlaqmupmDFK1UsBgEgeA8plD/X3yogViIgIiICIiB//2Q==", "https://image.shutterstock.com/image-vector/cartoon-boy-giving-you-thumbs-260nw-143614309.jpg","https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190505227/122760736-little-girl-avatar-character-vector-illustration-design.jpg?ver=6", "https://banner2.cleanpng.com/20180519/rgi/kisspng-brother-stock-photography-clip-art-5b00cc9f15af10.3178187215267790390888.jpg", "https://www.kindpng.com/picc/m/30-305982_family-of-five-animated-hd-png-download.png"];
+var names = ["Mom", "Dad", "Me", "sister", "brother"];
+var i = 0;
+
+function update(){
+
+  var array_length = images.length - 1;
+  var updated_image = images[i];
+  var updated_text = names[i];
+
+  document.getElementById("family_book_image").src = updated_image;
+  document.getElementById("name").innerHTML = updated_text;
+
+  i++;
+
+
+  if(i>array_length){
+  i = 0;
+                
+  }
+}
+</script>
